@@ -16,7 +16,8 @@ db_password = os.getenv("DB_PASSWORD")
 
 
 def connect_to_mysql():
-    connectionData = f"mysql+pymysql://{db_user}:{db_password}@localhost/nlpchat"
+    #connectionData = f"mysql+pymysql://{db_user}:{db_password}@localhost/nlpchat"
+    connectionData ="mysql://b87d1e8870618d:981537d6@eu-cdbr-west-01.cleardb.com/heroku_445b736ffbf8040?reconnect=true"
     try:
 
         engine = create_engine(connectionData, echo=False)
