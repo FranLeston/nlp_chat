@@ -13,6 +13,7 @@ load_dotenv()
 
 db_user = os.getenv("DB_USER")
 db_password = os.getenv("DB_PASSWORD")
+db_url = os.getenv("DATABASE_URL")
 
 
 def connect_to_mysql():
