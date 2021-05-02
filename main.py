@@ -38,6 +38,6 @@ def index():
 app.register_blueprint(UserRoutes)
 app.register_blueprint(ChatRoutes)
 
-port = int(os.environ.get("PORT", 5000))
+port = int(os.environ.get("PORT", 8888))
 app.run(host='0.0.0.0', port=port,threaded=True)
 #app.run()
