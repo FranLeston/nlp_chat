@@ -13,12 +13,11 @@ load_dotenv()
 
 db_user = os.getenv("DB_USER")
 db_password = os.getenv("DB_PASSWORD")
-db_url = os.getenv("DATABASE_URL")
 
 
 def connect_to_mysql():
     #connectionData = f"mysql+pymysql://{db_user}:{db_password}@localhost/nlpchat"
-    connectionData ="mysql://b87d1e8870618d:981537d6@eu-cdbr-west-01.cleardb.com/heroku_445b736ffbf8040?reconnect=true"
+    connectionData ="mysql+pymysql://b87d1e8870618d:981537d6@eu-cdbr-west-01.cleardb.com/heroku_445b736ffbf8040"
     try:
 
         engine = create_engine(connectionData, echo=False)
