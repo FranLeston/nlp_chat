@@ -8,7 +8,6 @@ Automat==0.8.0
 autopep8==1.5.6
 Babel==2.9.0
 backcall==0.2.0
-beautifulsoup4==4.9.3
 bleach==3.3.0
 blinker==1.4
 blis==0.7.4
@@ -118,10 +117,7 @@ pyserial==3.4
 PySocks==1.7.1
 pytest==6.2.3
 python-apt==2.0.0+ubuntu0.20.4.4
-python-dateutil==2.8.1
-python-debian===0.1.36ubuntu1
 python-dotenv==0.17.0
-pytz==2021.1
 PyYAML==5.3.1
 pyzmq==22.0.3
 regex==2021.4.4
@@ -137,7 +133,6 @@ service-identity==18.1.0
 simplejson==3.16.0
 sklearn2==0.0.13
 smart-open==3.0.0
-sniffio==1.2.0
 sodapy==2.1.0
 sos==4.0
 soupsieve==2.2.1
