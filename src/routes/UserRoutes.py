@@ -9,7 +9,7 @@ UserRoutes = Blueprint('UserRoutes', __name__)
 CORS(UserRoutes)
 
 
-@UserRoutes.route('/users', methods=["GET"])
+@UserRoutes.route('/api/users', methods=["GET"])
 def get_all_users():
     users = UserController.get_all_users()
 
@@ -25,7 +25,7 @@ def get_all_users():
         return resp
 
 
-@ UserRoutes.route('/users', methods=["POST"])
+@UserRoutes.route('/api/users', methods=["POST"])
 def create_user():
     user = request.get_json()
     created_user = UserController.create_user(user)
@@ -42,7 +42,7 @@ def create_user():
         return resp
 
 
-@ UserRoutes.route('/users/<id>', methods=["GET"])
+@UserRoutes.route('/api/users/<id>', methods=["GET"])
 def get_user(id):
 
     user = UserController.get_user(id)

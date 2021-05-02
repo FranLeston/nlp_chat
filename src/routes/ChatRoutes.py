@@ -8,7 +8,8 @@ from flask_cors import CORS
 ChatRoutes = Blueprint('ChatRoutes', __name__)
 CORS(ChatRoutes)
 
-@ChatRoutes.route('/chats', methods=["GET"])
+
+@ChatRoutes.route('/api/chats', methods=["GET"])
 def get_messages():
     messages = ChatController.get_messages()
     messages = messages.to_dict('records')
@@ -17,7 +18,7 @@ def get_messages():
     return resp
 
 
-@ChatRoutes.route('/chats', methods=["POST"])
+@ChatRoutes.route('/api/chats', methods=['POST'])
 def create_message():
     message = request.get_json()
     created_message = ChatController.create_message(message)

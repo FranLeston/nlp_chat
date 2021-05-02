@@ -13,6 +13,7 @@ import json
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
+load_dotenv()
 
 # My functions
 
@@ -21,12 +22,19 @@ if __name__ == '__main__':
     if conn:
         db.create_schemas(conn)
 
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder='client/dist/', static_url_path='/')
 
     # enable CORS
     CORS(app, resources={r'/*': {'origins': '*'}})
+
+    # Set up the index route
+    @app.route('/')
+    def index():
+        return app.send_static_file('index.html')
+
     app.register_blueprint(UserRoutes)
     app.register_blueprint(ChatRoutes)
 
-
-    app.run("0.0.0.0", 5000, debug=True)
+    if __name__ == "__main__":
+        port = int(os.environ.get("PORT", 5000))
+        app.run(host='0.0.0.0', port=port,threaded=True)
