@@ -6,7 +6,7 @@ from flask_cors import CORS
 
 
 ChatRoutes = Blueprint('ChatRoutes', __name__)
-CORS(ChatRoutes)
+#CORS(ChatRoutes)
 
 
 @ChatRoutes.route('/api/chats', methods=["GET"])

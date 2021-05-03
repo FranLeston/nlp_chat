@@ -26,11 +26,11 @@ if conn:
 
 
 # enable CORS
-CORS(app, resources={r'/*': {'origins': '*'}})
-
+    CORS(app, resources={r'/*': {'origins': '*'}})
+    app.register_blueprint(UserRoutes)
+    app.register_blueprint(ChatRoutes)
 
 
 if __name__ == '__main__':
-    app.register_blueprint(UserRoutes)
-    app.register_blueprint(ChatRoutes)  
+      
     app.run()

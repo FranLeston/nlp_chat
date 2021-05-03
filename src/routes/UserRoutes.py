@@ -6,7 +6,7 @@ from flask_cors import CORS
 
 
 UserRoutes = Blueprint('UserRoutes', __name__)
-CORS(UserRoutes)
+#CORS(UserRoutes)
 
 
 @UserRoutes.route('/api/users', methods=["GET"])
