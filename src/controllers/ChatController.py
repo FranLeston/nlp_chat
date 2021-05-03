@@ -8,9 +8,9 @@ conn = db.connect_to_mysql()
 def get_messages():
     messages = pd.read_sql_query(
         f"""
-            SELECT Chats.id, Chats.user_id, Chats.message, Chats.sentiment, Chats.created_at, Users.name, Users.sex,Users.age
+            SELECT Chats.id, Chats.user_id, Chats.message, Chats.sentiment, Chats.created_at, Users.name, Users.sex, Users.age
             FROM Chats 
-            left JOIN Users
+            LEFT JOIN Users
             ON Chats.user_id = Users.id
             ORDER BY Chats.created_at DESC
               """, conn.execution_options(autocommit=True)

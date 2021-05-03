@@ -18,10 +18,10 @@ db_url = os.getenv("DATABASE_URL")
 
 def connect_to_mysql():
     #connectionData = f"mysql+pymysql://{db_user}:{db_password}@localhost/nlpchat"
-    connectionData = db_url
+    connectionData =db_url
     try:
 
-        engine = create_engine(connectionData, echo=False)
+        engine = create_engine(connectionData, echo=False, pool_recycle=3600)
         engine.execution_options(isolation_level="AUTOCOMMIT")
         if not database_exists(engine.url):
             create_database(engine.url)
@@ -34,7 +34,7 @@ def connect_to_mysql():
     except Exception as error:
         print("Oh no..could not connect to the DB. Exiting...")
         print(error)
-        sys.exit()
+        
 
 
 def create_schemas(conn):
