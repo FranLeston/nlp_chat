@@ -40,7 +40,7 @@ def get_user(user_id):
                 Users
                 WHERE
                 id = {id}
-                """, conn
+                """, conn.execution_options(autocommit=True)
         )
         return user
     except:
@@ -62,7 +62,7 @@ def create_user(user):
               Users
               WHERE
               name = '{name}'
-              """, conn
+              """, conn.execution_options(autocommit=True)
     )
 
     if name_exists.empty:
@@ -83,7 +83,7 @@ def create_user(user):
                 Users
                 WHERE
                 id = {user_id}
-                """, conn
+                """, conn.execution_options(autocommit=True)
         )
 
         return user_db

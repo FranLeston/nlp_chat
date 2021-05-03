@@ -30,12 +30,6 @@ CORS(app, resources={r'/*': {'origins': '*'}})
 
 # Set up the index route
 
-
-@app.route('/')
-def index():
-    return app.send_static_file('index.html')
-
-
 app.register_blueprint(UserRoutes)
 app.register_blueprint(ChatRoutes)
 

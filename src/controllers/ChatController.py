@@ -13,7 +13,7 @@ def get_messages():
             left JOIN Users
             ON Chats.user_id = Users.id
             ORDER BY Chats.created_at DESC
-              """, conn
+              """, conn.execution_options(autocommit=True)
     )
 
     return messages
@@ -44,7 +44,7 @@ def create_message(message):
               Chats
               WHERE
               id = {chat_id}
-              """, conn
+              """, conn.execution_options(autocommit=True)
     )
 
     return the_message
