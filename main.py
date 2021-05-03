@@ -16,9 +16,9 @@ from flask_cors import CORS
 load_dotenv()
 
 # My functions
-#app = Flask(__name__, static_folder='client/dist/', static_url_path='/')
+app = Flask(__name__, static_folder='client/dist/', static_url_path='/')
 # app.config.from_object(__name__)
-app = Flask(__name__)
+#app = Flask(__name__)
 
 conn = db.connect_to_mysql()
 if conn:
@@ -41,5 +41,4 @@ app.register_blueprint(ChatRoutes)
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
-    #app.run(host='0.0.0.0', port=port, threaded=True)
     app.run()
