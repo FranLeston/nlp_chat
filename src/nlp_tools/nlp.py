@@ -12,10 +12,6 @@ from nltk.corpus import stopwords
 # TextBlob
 from textblob import TextBlob
 
-# SpaCy
-import spacy
-from spacy import displacy
-
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('vader_lexicon')
