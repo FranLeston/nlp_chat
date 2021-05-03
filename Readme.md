@@ -49,4 +49,4 @@ CREATE MESSAGE -- POST https://ironhack-nlp.herokuapp.com/api/chats
 
 ## Finally, here is an example of a plot chart inside notebooks/chatAnalisys.ipynb
 
-![alt text](FranLeston/nlp_chat/blob/master/notebooks/images/sentikde.png?raw=true)
+![alt text](https://github.com/FranLeston/nlp_chat/blob/master/notebooks/images/sentikde.png?raw=true)
