@@ -28,7 +28,7 @@ CREATE USER -- POST https://ironhack-nlp.herokuapp.com/api/users
 "name": "Emilio",
 "sex": "M",
 "age": 23,
-"role": 0 
+"role": 0
 }
 
 GET ALL USERS -- GET https://ironhack-nlp.herokuapp.com/api/users
@@ -45,8 +45,8 @@ CREATE MESSAGE -- POST https://ironhack-nlp.herokuapp.com/api/chats
 
 ## Here is a schema of the simple db setup
 
-![alt text](https://github.com/FranLeston/shark_attack_data_analysis/blob/main/notebooks/images/dbSchema.png?raw=true)
+![alt text](https://github.com/nlp_chat/blob/master/notebooks/images/dbSchema.png?raw=true)
 
 ## Finally, here is an example of a plot chart inside notebooks/chatAnalisys.ipynb
 
-![alt text](https://github.com/FranLeston/shark_attack_data_analysis/blob/main/notebooks/images/sentikde.png?raw=true)
+![alt text](https://github.com/nlp_chat/blob/master/notebooks/images/sentikde.png?raw=true)
