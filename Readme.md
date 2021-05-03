@@ -45,8 +45,8 @@ CREATE MESSAGE -- POST https://ironhack-nlp.herokuapp.com/api/chats
 
 ## Here is a schema of the simple db setup
 
-![alt text](https://github.com/nlp_chat/blob/master/notebooks/images/dbSchema.png?raw=true)
+![alt text](https://github.com/FranLeston/nlp_chat/blob/master/notebooks/images/dbSchema.png?raw=true)
 
 ## Finally, here is an example of a plot chart inside notebooks/chatAnalisys.ipynb
 
-![alt text](https://github.com/nlp_chat/blob/master/notebooks/images/sentikde.png?raw=true)
+![alt text](FranLeston/nlp_chat/blob/master/notebooks/images/sentikde.png?raw=true)
