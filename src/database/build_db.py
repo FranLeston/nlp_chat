@@ -28,7 +28,7 @@ def connect_to_mysql():
 
         print(database_exists(engine.url))
         print("Great..we have connected to the DB")
-        conn = engine.connect()
+        conn = engine
 
         return conn
     except Exception as error:
