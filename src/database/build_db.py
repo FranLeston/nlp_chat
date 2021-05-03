@@ -21,7 +21,7 @@ def connect_to_mysql():
     connectionData =db_url
     try:
 
-        engine = create_engine(connectionData, echo=False, pool_recycle=3600)
+        engine = create_engine(connectionData, echo=False)
         engine.execution_options(isolation_level="AUTOCOMMIT")
         if not database_exists(engine.url):
             create_database(engine.url)
