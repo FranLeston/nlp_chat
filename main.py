@@ -28,11 +28,9 @@ if conn:
 # enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
-# Set up the index route
 
-app.register_blueprint(UserRoutes)
-app.register_blueprint(ChatRoutes)
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
+    app.register_blueprint(UserRoutes)
+    app.register_blueprint(ChatRoutes)  
     app.run()
