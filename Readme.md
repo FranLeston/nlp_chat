@@ -8,7 +8,7 @@ This project consists of a Python Flask API using MySQL. The endpoints will allo
 the api. Before the chat message is stored in the DB, it is ran through the NLPTK library. The natural language processing algorithm will assign a value of -1 to 1
 to the message. -1 being the most Negative sentiment, 0 is Neutral, and 1 being the most positive.
 
-In this repo, the is also a jupiter notebook in which you may execute the requests in real-time to get an overall analysis of the chat.
+In this repo, there is also a jupiter notebook in which you may execute the requests in real-time to get an overall analysis of the chat.
 
 ## Installation
 
@@ -47,6 +47,6 @@ CREATE MESSAGE -- POST https://ironhack-nlp.herokuapp.com/api/chats
 
 ![alt text](https://github.com/FranLeston/nlp_chat/blob/master/notebooks/images/dbSchema.png?raw=true)
 
-## Finally, here is an example of a plot chart inside notebooks/chatAnalisys.ipynb
+## Finally, here is an example of a KDE chart inside notebooks/chatAnalisys.ipynb
 
 ![alt text](https://github.com/FranLeston/nlp_chat/blob/master/notebooks/images/sentikde.png?raw=true)
