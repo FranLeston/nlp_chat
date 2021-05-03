@@ -16,8 +16,7 @@ from flask_cors import CORS
 load_dotenv()
 
 # My functions
-app = Flask(__name__)
-#app = Flask(__name__, static_folder='client/dist/', static_url_path='/')
+app = Flask(__name__, static_folder='client/dist/', static_url_path='/')
 app.config.from_object(__name__) 
 
 
@@ -38,6 +37,6 @@ def index():
 app.register_blueprint(UserRoutes)
 app.register_blueprint(ChatRoutes)
 
-port = int(os.environ.get("PORT", 8888))
+port = int(os.environ.get("PORT", 5000))
 app.run(host='0.0.0.0', port=port,threaded=True)
 #app.run()
