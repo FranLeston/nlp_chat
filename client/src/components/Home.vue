@@ -111,7 +111,7 @@ export default {
       const vm = this;
       this.userTaken = false;
       axios
-        .post("http://localhost:5000/api/users", this.form)
+        .post("api/users", this.form)
         .then((res) => {
           var user = res.data;
           localStorage.setItem("user", JSON.stringify(user));
